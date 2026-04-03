@@ -1,0 +1,41 @@
+
+@font-face {
+    font-family: 'GE-SS-Two-Bold_ar';
+    src: url('/css/fonts/fonts/GE-SS-Two-ar/GE-SS-Two-Bold-ar.otf');
+}
+@font-face {
+    font-family: 'GE-SS-Two-Light_ar';
+    src: url('/css/fonts/fonts/GE-SS-Two-ar/GE-SS-Two-Light-ar.otf');
+}
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Black.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Bold.ttf');
+}
+@font-face {
+    font-family: 'Nunito-ExtraBold';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Nunito-ExtraLight';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Light.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Thin';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Thin.ttf');
+}
