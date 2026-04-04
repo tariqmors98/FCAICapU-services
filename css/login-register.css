@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'GE-SS-Two-Bold_ar';
+    src: url('../css/fonts/GE-SS-Two-ar/GE-SS-Two-Bold-ar.otf');
+}
+@font-face {
+    font-family: 'GE-SS-Two-Light_ar';
+    src: url('../css/fonts/GE-SS-Two-ar/GE-SS-Two-Light-ar.otf');
+}
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url('../css/fonts/Nunito-en/Nunito-Bold.ttf');
+}
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: url('../css/fonts/Nunito-en/Nunito-SemiBold.ttf');
+}
+
+body {
+    background: linear-gradient(135deg,#0f2027,#498199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-box {
+    font-family: 'Nunito-Bold';
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #9ccbdf;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+h2 {
+    text-decoration: underline;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+input {
+    width: 350px;
+    margin-bottom: 25px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 200ms;
+}
+input:focus {
+    outline: 2px solid blue;
+    border:2px solid transparent;
+}
+button {
+    width: 150px;
+    padding: 10px;
+    background: linear-gradient(135deg,#0f2027,#498199);
+    color: white;
+    border: none;
+    border-radius: 35px;
+    transition: 200ms;
+}
+button:hover {
+    background: linear-gradient(135deg,#498199,#0f2027);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+    color: #9ccbdf;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

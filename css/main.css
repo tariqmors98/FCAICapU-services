@@ -1,41 +1,130 @@
-
 @font-face {
     font-family: 'GE-SS-Two-Bold_ar';
-    src: url('/css/fonts/fonts/GE-SS-Two-ar/GE-SS-Two-Bold-ar.otf');
+    src: url('../css/fonts/GE-SS-Two-ar/GE-SS-Two-Bold-ar.otf');
 }
 @font-face {
     font-family: 'GE-SS-Two-Light_ar';
-    src: url('/css/fonts/fonts/GE-SS-Two-ar/GE-SS-Two-Light-ar.otf');
-}
-@font-face {
-    font-family: 'Nunito-Black';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-Black.ttf');
+    src: url('../css/fonts/GE-SS-Two-ar/GE-SS-Two-Light-ar.otf');
 }
 @font-face {
     font-family: 'Nunito-Bold';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-Bold.ttf');
-}
-@font-face {
-    font-family: 'Nunito-ExtraBold';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-ExtraBold.ttf');
-}
-@font-face {
-    font-family: 'Nunito-ExtraLight';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-ExtraLight.ttf');
-}
-@font-face {
-    font-family: 'Nunito-Light';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-Light.ttf');
-}
-@font-face {
-    font-family: 'Nunito-Regular';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-Regular.ttf');
+    src: url('../css/fonts/Nunito-en/Nunito-Bold.ttf');
 }
 @font-face {
     font-family: 'Nunito-SemiBold';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-SemiBold.ttf');
+    src: url('../css/fonts/Nunito-en/Nunito-SemiBold.ttf');
 }
-@font-face {
-    font-family: 'Nunito-Thin';
-    src: url('/css/fonts/fonts/Nunito-en/Nunito-Thin.ttf');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Nunito-Bold';
+}
+body {
+    background: #f5f5f5;
+}
+.navbar {
+    font-family: 'Nunito-Bold';
+    background-color: transparent;
+    filter: drop-shadow(0 0 10px blue);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar .container {
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 0 10px blue);
+}
+.navbar .logo {
+    width: 70px;
+    height: 80px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 10px blue);
+}
+.navbar .navbar-brand.text-white.ps-2 {
+    font-size: 24px;
+}
+.navbar ul {
+    margin: auto;
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+.navbar ul li {
+    width: 135px;
+    display: flex;
+    justify-content: center;
+
+}
+.navbar ul li a {
+    padding: 8px;
+    width: 100%;
+    border: 2px solid transparent;
+    border-bottom: 2px solid white;
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    transition: 200ms;
+}
+.navbar ul li a:hover {
+    border: 2px solid cyan;
+    border-bottom: 2px solid blue;
+    font-weight: bold;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 50px 0 rgba(0, 255, 255, 0.322);
+}
+.navbar .loginBtn {
+    background: #E2A606;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 35px;
+    width: 100px;
+    border: none;
+    transition: 200ms;
+}
+.navbar .loginBtn:hover {
+    background: #E2A606;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px 0 rgba(255, 255, 0, 0.322);
+}
+.hero {
+    background-color: transparent;
+    /* color: white; */
+    padding: 120px 20px;
+    text-align: center;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../attachments/wallpapers/FCAIH.jpg');
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: #111;
+    width: 100%;
+    z-index: 0;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.project-card {
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }

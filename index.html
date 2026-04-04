@@ -4,16 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap-icons.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>منصة دعم الكلية</title>
+    <title>FCAICapU-crowdfunding</title>
+    <link rel="shortcut icon" href="attachments/logos/logo1.png" type="image/x-icon">
 </head>
 <body>
-    
-    <footer class="footer text-center mt-5">
-        <p>© 2026 جميع الحقوق محفوظة</p>
-    </footer>    
-    <script src="js/bootstrap-js/bootstrap.min.js"></script>
+    <nav class="navbar">
+        <div class="container">
+            <div>
+                <img src="attachments/logos/logo1.png" alt="Logo" class="logo">
+                <a class="navbar-brand text-white ps-2" href="/index.html">FCAICapU-crowdfunding.</a>
+            </div>
+            <ul>
+                <li><a href="#home" class="text-white mx-2">Home</a></li>
+                <li><a href="#projects" class="text-white mx-2">Projects</a></li>
+                <li><a href="#donate" class="text-white mx-2">Donate</a></li>
+                <li><a href="#contact" class="text-white mx-2">Contact</a></li>
+            </ul>
+            <a href="html/login.html" class="btn btn-light mx-1 loginBtn">Login</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Contribute to Developing and Building Your University🎓</h1>
+        <p>Every Pound Makes a Difference❤️</p>
+    </section>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Current Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5>Computer Lab</h5>
+                        <p>Our goal is 50,000 EGP</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 60%">60%</div>
+                        </div>
+                        <a href="#donate" class="btn btn-success mt-3">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="donate" class="container my-5">
+        <h2 class="text-center">Donate Now</h2>
+        <form action="php/donate.php" method="POST">
+            <input type="text" name="name" class="form-control my-2" placeholder="Your Name" required>
+            <input type="email" name="email" class="form-control my-2" placeholder="Your Email" required>
+            <input type="number" name="amount" class="form-control my-2" placeholder="Donation Amount" required>
+            <button class="btn btn-success w-100">Donate Now 💰</button>
+        </form>
+        <p id="msg" class="text-center mt-3"></p>
+    </section>
+    <footer>
+        <p>© 2026 All Rights Reserved</p>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
