@@ -27,6 +27,7 @@
 }
 * {
     font-family: 'Nunito-Bold';
+       transition: 500ms;
 }
 html {
     scroll-behavior: smooth;
