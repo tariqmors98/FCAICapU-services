@@ -45,6 +45,7 @@ darkMode.addEventListener("click", function () {
     color.setProperty("--about-img", "#660011");
     color.setProperty("--text-color", "black");
     color.setProperty("--text-color-inverted", "white");
+    color.setProperty("--whiteGray", "gray");
     color.setProperty("--card-body-p", "black");
     color.setProperty("--drop-shadow-color", "cyan")
     color.setProperty("--drop-shadow-color-inverted", "blue")
@@ -60,6 +61,7 @@ lightMode.addEventListener("click", function () {
     color.setProperty("--about-img", "#ffc0ca");
     color.setProperty("--text-color", "white");
     color.setProperty("--text-color-inverted", "black");
+    color.setProperty("--whiteGray", "white");
     color.setProperty("--card-body-p", "#aaa");
     color.setProperty("--drop-shadow-color", "blue")
     color.setProperty("--drop-shadow-color-inverted", "cyan")
