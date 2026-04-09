@@ -12,7 +12,7 @@
     transform: translate(50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #226878;
     z-index: -1;
 }
 .support {
@@ -81,10 +81,72 @@
     background-color: var(--donations-bgcolor);
     border-radius: 20px;
 }
-.s-box p:nth-child(1) {
-    font-size: x-large;
+.s-box > p:nth-child(1) {
+    margin: 0;
+    font-size: 30px;
     text-align: center;
 }
-.s-box p:nth-child(2) {
-    
+.s-box > p:nth-child(2) {
+    font-family: 'Nunito-Light';
+    font-size: 20px;
+    text-align: center;
+}
+.s-box .div1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+.div1 img {
+    width: 65%;
+    height: 100%;
+    background-color: red;
+}
+.div1 .div2 {
+    width: 35%;
+    height: 100%;
+    display: grid;
+    flex-direction: column;
+}
+.div2 .progress {
+    margin-bottom: 10px;
+    background-color: var(--donations-container-bgcolor);
+    border-radius: 35px;
+    height: 15px;
+}
+.div2 .progress-bar {
+    background-color: #009E74;
+    width: 75%;
+}
+.div2 .div3 {
+    padding-left: 15px;
+    margin: 2px;
+}
+.div2 button {
+    margin: auto;
+    width: 150px;
+    height: 35px;
+    background-color: #009E74;
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+}
+.div2 button:hover {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.281);
+}
+.div2 button:active {
+    scale: 0.9;
+    background-color: #005f45;
+}
+.div2 div:nth-child(2) span {
+    color: #009E74;
+    font-size: 30px;
+}
+.div3:nth-child(3) span,
+.div3:nth-child(4) span {
+    color: var(--text-color-inverted);
+    font-size: 30px;
+}
+.div3 p {
+    font-family: 'Nunito-Light';
+    color: var(--text-color-inverted);
 }

@@ -18,6 +18,10 @@
     font-family: 'Playball-en';
     src: url('fonts/Playball-en/Playball-Regular.ttf');
 }
+@font-face {
+    font-family: 'Patrick_Hand';
+    src: url('fonts/Patrick_Hand/PatrickHand-Regular.ttf');
+}
 
 /* ------------------------------------------------------------------------- Basics */
 :root {
@@ -32,10 +36,11 @@
     --text-color-inverted: black;
     --whiteGray: white;
     --card-body-p: #aaa;
+    --box-shadow-80: #00000080;
     --drop-shadow-color: transparent;
     --drop-shadow-color-inverted: cyan;
     --donations-bgcolor: #d6d6d6;
-    --donations-container-bgcolor: #b1b1b1;
+    --donations-container-bgcolor: #c1c1c1;
 }
 * {
     font-family: 'Nunito-Bold';
@@ -87,7 +92,7 @@ html {
     font-weight: bold;
     scale: 1.02;
 }
-.navbar .navbar-brand.text-white.ps-2:focus {
+.navbar .navbar-brand.text-white.ps-2:active {
     scale: 0.90;
 }
 .navbar ul {
@@ -117,29 +122,29 @@ html {
     border-bottom: 2px solid blue;
     font-weight: bold;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px 0 rgba(0, 255, 255, 0.322);
+    box-shadow: 0 10px 20px 0 #00ffff52;
 }
-.navbar ul li a:focus {
+.navbar ul li a:active {
     scale: 0.75;
 }
 .navbar .loginBtn {
     margin-top: -15px;
-    background: linear-gradient(135deg,var(--text-color), gray);
+    background: linear-gradient(135deg, #99ecff,#2c8ea4);
     color: var(--text-color-inverted);
     padding: 10px 20px;
-    border: 2px solid pink;
+    border: none;
     border-radius: 35px;
     width: 100px;
     transition: 200ms;
 }
 .navbar .loginBtn:hover {
-    background: linear-gradient(135deg, gray,pink);
+    background: linear-gradient(135deg,#2c8ea4, #99ecff);
     color: var(--text-color);
-    border: 2px solid white;
+    border: 1.5px solid white;
     transform: translateY(-5px);
-    box-shadow: 0 15px 10px 0 gray;
+    box-shadow: 0 10px 15px 0 #00ffff52;
 }
-.navbar .loginBtn:focus {
+.navbar .loginBtn:active {
     scale: 0.75;
 }
 .navbar .theme {
@@ -158,7 +163,7 @@ html {
     font-size: 26px;
     width: 30px;
     height: 30px;
-    color: cyan;
+    color: white;
     cursor: pointer;
 }
 .theme .theme-icon:hover {
@@ -186,7 +191,7 @@ html {
     top: 0;
     right: 0;
     background: 
-        linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.372) 50%, rgba(0,0,0,1) 100%),
+    linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.372) 50%, rgba(0,0,0,1) 100%),
         url('../attachments/wallpapers/FCAIH2.jpg') fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -195,10 +200,28 @@ html {
     z-index: -1;
 }
 .hero h1 {
+    margin: auto;
     margin-top: -35px;
+    margin-bottom: 50px;
+    padding: 5px;
+    white-space: pre;
+    overflow: hidden;
     font-size: 42px;
-    letter-spacing: 10px;
-    filter: drop-shadow(0 0 10px red);
+    width: 100%;
+    letter-spacing: 1px;
+    color: #d7d7d7;
+    border-right: 5px solid white;
+    animation: typing-1 3s steps(50), blink 350ms infinite;
+}
+.hero p {
+    margin: auto;
+    font-family: 'Patrick_Hand';
+    letter-spacing: 1px;
+    font-size: 30px;
+    width: 100%;
+    white-space: pre;
+    overflow: hidden;
+    animation: typing-1 3s 3s steps(50), blink 350ms infinite;
 }
 .hero audio {
     width: 50%;
@@ -206,15 +229,16 @@ html {
 
 /* ------------------------------------------------------------------------- about */
 .about {
-    padding: 50px;
+    padding: 30px;
     background-color: var(--text-color);
-    scroll-margin-top: 75px;
+    scroll-margin-top: 90px;
     transition: 200ms;
 }
 .about .container {
     font-family: 'Nunito-Bold';
     padding: 40px 20px;
-    background-color: var(--donations-container-bgcolor);
+    background: var(--text-color);
+    box-shadow: 0 0 30px 0 var(--box-shadow-80);
     color: var(--text-color-inverted);
     border-radius: 35px;
     display: flex;
@@ -225,27 +249,28 @@ html {
     height: 400px;
 }
 .about .container h1 {
-    filter: drop-shadow(0 0 10px var(--drop-shadow-color));
+    color: #339cb3;
 }
 .about .container p {
     font-size: 22px;
     width: 80%;
 }
 .container #volunteers {
-    background: linear-gradient(135deg, var(--text-color-inverted), gray);
+    background: linear-gradient(#226878);
     color: var(--text-color);
-    border: 2px solid gray;
+    border: 2px solid #278195;
     padding: 10px 20px;
     border-radius: 35px;
     width: 150px;
     transition: 200ms;
 }
 .container #volunteers:hover {
-    background: linear-gradient(135deg, gray, pink);
-    color: white;
-    border: 2px solid white;
+    background: linear-gradient(135deg, #99ecff,#226878 30% 70%, #99ecff);
+    color: var(--text-color-inverted);
     transform: translateY(-3px);
-    scale: 1.05;
+}
+.container #volunteers:active {
+    scale: 0.75;
 }
 .pop-up {
     position: fixed;
@@ -266,7 +291,7 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(255, 0, 0, 0.221);
+    background-color: var(--donations-bgcolor);
     color: var(--text-color-inverted);
     width: 55px;
     height: 40px;
@@ -285,7 +310,7 @@ html {
     right: 50%;
     transform: translate(50%, -50%);
     background-color: var(--donations-bgcolor);
-    box-shadow: 0 0 0 5px gray;
+    box-shadow: 0 0 0 3px gray;
     padding: 20px;
     border-radius: 35px 0 35px 35px;
     width: 80%;
@@ -332,8 +357,8 @@ html {
 .mini-pop-up .container2 .div1 div:hover,
 .mini-pop-up .container2 .div2 div:hover,
 .mini-pop-up .container2 .div3 div:hover {
-    width: 100%;
-    height: 70%;
+    width: 90%;
+    height: 55%;
 }
 .mini-pop-up .container2 img {
     margin: 15px 0;
@@ -355,14 +380,15 @@ html {
     display: block;
     width: 100%;
     height: 100%;
-    background: var(--donations-bgcolor);
+    background: var(--text-color);
     gap: 20px;
 }
 .donations .container {
     font-family: 'Nunito-Bold';
     padding: 40px 20px;
-    background: var(--donations-container-bgcolor);
+    background: var(--text-color);
     color: var(--text-color-inverted);
+    box-shadow: 0 0 30px 0 var(--box-shadow-80);
     border-radius: 35px;
     display: flex;
     flex-direction: column;
@@ -373,8 +399,7 @@ html {
 .donations .container h2 {
     font-size: 40px;
     text-align: center;
-    color: var(--text-color-inverted);
-    filter: drop-shadow(0 0 10px var(--drop-shadow-color));
+    color: #339cb3;
 }
 .container .project-card {
     padding: 20px;
@@ -413,7 +438,7 @@ html {
 }
 .card-body a {
     scroll-margin-top: 300px;
-    background: linear-gradient(135deg, var(--text-color-inverted), gray);
+    background: linear-gradient(#226878);
     color: var(--text-color);
     box-shadow: 0 0 10px gray;
     border: none;
@@ -422,13 +447,14 @@ html {
     transition: 200ms;
 }
 .card-body a:hover {
-    background: linear-gradient(135deg, gray, pink);
     color: var(--text-color-inverted);
 }
 .card-body:nth-child(even) a:hover {
+    background: linear-gradient(135deg, #99ecff,#2c8ea4 30% 70%, #99ecff);
     box-shadow: 10px 10px 10px gray;
 }
 .card-body:nth-child(odd) a:hover {
+    background: linear-gradient(135deg, #99ecff,#2c8ea4 30% 70%, #99ecff);
     box-shadow: -10px 10px 10px gray;
 }
 
@@ -455,8 +481,7 @@ html {
     width: max-content;
     margin: auto;
     margin-bottom: 26px;
-    color: var(--text-color-inverted);
-    filter: drop-shadow(0 0 10px var(--drop-shadow-color));
+    color: #339cb3;
 }
 .contact .bootstrap-icons {
     display: flex;
@@ -486,13 +511,12 @@ html {
     align-items: center;
 }
 .icon-div .circle:hover {
-    border: 2px solid yellow;
+    border: 2px solid cyan;
     background-color: var(--donations-container-bgcolor);
-    filter: drop-shadow(0 0 5px var(--text-color-inverted));
     .bi-geo-alt-fill,
     .bi-envelope-fill,
     .bi-telephone-fill {
-        color: yellow;
+        color: cyan;
     }
 }
 .icon-div p {
@@ -546,23 +570,55 @@ html {
 .contact form button {
     border: none;
     border-radius: 30px;
-    background: linear-gradient(135deg, var(--text-color-inverted), gray);
-    color: var(--text-color);
+    background: linear-gradient(#226878);
     box-shadow: 0 0 10px gray;
     width: 20%;
     height: 40px;
     transition: 200ms;
 }
 .contact form button:hover {
-    background: linear-gradient(135deg, var(--donations-container-bgcolor), pink);
-    box-shadow: 10px 10px 10px gray;
+    background: linear-gradient(135deg, #99ecff,#226878 30% 70%, #99ecff);    color: var(--text-color);
+    box-shadow: 0 10px 10px gray;
 }
 
 /* ------------------------------------------------------------------------- footer */
 
 footer {
+    padding: 30px;
     background: #111;
     color: white;
-    padding: 20px;
     text-align: center;
+}
+footer .icons {
+    padding: 0 20%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+.icons .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.app .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #464646;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon i {
+    width: 85%;
+    height: 85%;
+    font-size: 30px;
+}
+footer p {
+    margin: 0;
+    margin-bottom: -20px;
 }

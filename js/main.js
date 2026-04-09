@@ -3,7 +3,7 @@
 let navScroll = document.getElementsByClassName("navbar")[0];
 window.onscroll = function () {
     if (document.documentElement.scrollTop > 135) {
-        navScroll.style.backgroundColor = "brown";
+        navScroll.style.backgroundColor = "#226878";
     } else {
         navScroll.style.backgroundColor = "transparent";
     }
@@ -47,6 +47,7 @@ darkMode.addEventListener("click", function () {
     color.setProperty("--text-color-inverted", "white");
     color.setProperty("--whiteGray", "gray");
     color.setProperty("--card-body-p", "black");
+    color.setProperty("--box-shadow-80", "#ffffff40");
     color.setProperty("--drop-shadow-color", "cyan")
     color.setProperty("--drop-shadow-color-inverted", "blue");
     color.setProperty("--donations-bgcolor", "#202020")
@@ -65,6 +66,7 @@ lightMode.addEventListener("click", function () {
     color.setProperty("--text-color-inverted", "black");
     color.setProperty("--whiteGray", "white");
     color.setProperty("--card-body-p", "#aaa");
+    color.setProperty("--box-shadow-80", "#00000080");
     color.setProperty("--drop-shadow-color", "transparent")
     color.setProperty("--drop-shadow-color-inverted", "cyan");
     color.setProperty("--donations-bgcolor", "#d6d6d6");
@@ -72,15 +74,26 @@ lightMode.addEventListener("click", function () {
 });
 
 document
-    .getElementById("donationForm")
+.getElementById("donationForm")
     .addEventListener("submit", function (e) {
         e.preventDefault();
 
         let name = document.getElementById("name").value;
         let amount = document.getElementById("amount").value;
-
+        
         document.getElementById("msg").innerHTML =
-            "شكراً يا " + name + " ❤️ تم تسجيل تبرعك بقيمة " + amount + " جنيه";
-
+        "شكراً يا " + name + " ❤️ تم تسجيل تبرعك بقيمة " + amount + " جنيه";
+        
         this.reset();
     });
+
+// ------------------------------------------------------------------------------------- for (html/filename.html)
+
+let back = document.getElementById("back");
+
+back.addEventListener(
+    "click",
+    function() {
+        
+    }
+)

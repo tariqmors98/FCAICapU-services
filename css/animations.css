@@ -8,6 +8,18 @@
         background: transparent;
     }
 }
+@keyframes typing-1 {
+    from {
+        width: 0%;
+    } to {
+        width: 100%;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
 @keyframes pop-up {
     from {
         backdrop-filter: blur(0px);
