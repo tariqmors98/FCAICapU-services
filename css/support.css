@@ -17,22 +17,26 @@
 }
 .support {
     padding: 20px;
+    padding-bottom: 0;
     background-color: var(--primary-color);
+    color: var(--text-color-inverted);
     width: 100%;
 }
 .support .container {
     padding: 50px;
-    background-color: var(--donations-container-bgcolor);
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 30px 0 var(--box-shadow-80);
+    border: 1px solid #226878;
     border-radius: 30px 30px 0 0;
 }
 .support h1 {
+    margin: 30px 0;
     text-align: center;
     text-decoration: underline;
-    margin: 30px 0;
 }
 .container .analysis {
     padding: 20px;
-    background-color: var(--donations-bgcolor);
+    background-color: var(--secondary-color);
     border-radius: 20px;
 }
 .analysis h2 {
@@ -46,7 +50,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 90%;
-    border: 1px solid black;
+    border: 1px solid #226878;
     border-radius: 20px;
     gap: 20px;
 }
@@ -79,6 +83,7 @@
     width: 95%;
     display: grid;
     background-color: var(--donations-bgcolor);
+    border: 1px solid #226878;
     border-radius: 20px;
 }
 .s-box > p:nth-child(1) {
@@ -100,6 +105,7 @@
     width: 65%;
     height: 100%;
     background-color: red;
+    border: 1px solid #226878;
 }
 .div1 .div2 {
     width: 35%;
@@ -112,6 +118,7 @@
     background-color: var(--donations-container-bgcolor);
     border-radius: 35px;
     height: 15px;
+    border: 1px solid #226878;
 }
 .div2 .progress-bar {
     background-color: #009E74;
@@ -127,8 +134,10 @@
     height: 35px;
     background-color: #009E74;
     color: var(--text-color);
+    border: 1px solid #226878;
     border: none;
     border-radius: 30px;
+    transition: 250ms;
 }
 .div2 button:hover {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.281);

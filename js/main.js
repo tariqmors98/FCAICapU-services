@@ -13,21 +13,27 @@ window.onscroll = function () {
 // button about volunteers & close Button animations
 
 let volunteerBtn = document.getElementById("volunteers");
-let popUp = document.getElementsByClassName("pop-up")[0];
-let miniPopUp = document.getElementsByClassName("mini-pop-up")[0];
-volunteerBtn.addEventListener("click", function () {
-    document.getElementById("volunteerdiv").style.display = "block";
-});
-let closeBtn = document.getElementById("closeBtn");
-closeBtn.addEventListener("click", function () {
-    popUp.classList.add("popup-hide");
-    miniPopUp.classList.add("mini-popup-hide");
-    setTimeout(function () {
-        document.getElementById("volunteerdiv").style.display = "none";
-        popUp.classList.remove("popup-hide");
-        miniPopUp.classList.remove("mini-popup-hide");
-    }, 750);
-});
+
+if (volunteerBtn) {
+    let popUp = document.getElementsByClassName("pop-up")[0];
+    let miniPopUp = document.getElementsByClassName("mini-pop-up")[0];
+
+    volunteerBtn.addEventListener("click", function () {
+        document.getElementById("volunteerdiv").style.display = "block";
+    });
+
+    let closeBtn = document.getElementById("closeBtn");
+    closeBtn.addEventListener("click", function () {
+        popUp.classList.add("popup-hide");
+        miniPopUp.classList.add("mini-popup-hide");
+
+        setTimeout(function () {
+            document.getElementById("volunteerdiv").style.display = "none";
+            popUp.classList.remove("popup-hide");
+            miniPopUp.classList.remove("mini-popup-hide");
+        }, 750);
+    });
+}
 
 // change theme and save it with its colours
 
@@ -144,11 +150,14 @@ document
 
 // ------------------------------------------------------------------------------------- for (html/filename.html)
 
-let back = document.getElementById("back");
+let back = document.querySelectorAll(".back");
 
-back.addEventListener(
-    "click",
-    function() {
-        
+back.forEach(
+    btn => {
+        btn.addEventListener("click",
+            function () {
+                alert("ssss");
+            }
+        )
     }
-)
+);

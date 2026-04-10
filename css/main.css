@@ -131,8 +131,9 @@ html {
     margin-top: -15px;
     background: linear-gradient(135deg, #99ecff,#2c8ea4);
     color: var(--text-color);
+    border: 1px solid #226878;
+    box-shadow: 0 0 0 3px #00ffff52;
     padding: 10px 20px;
-    border: none;
     border-radius: 35px;
     width: 100px;
     transition: 200ms;
@@ -140,7 +141,6 @@ html {
 .navbar .loginBtn:hover {
     background: linear-gradient(135deg,#2c8ea4, #99ecff);
     color: var(--text-color-inverted);
-    border: 1.5px solid white;
     transform: translateY(-5px);
     box-shadow: 0 10px 15px 0 #00ffff52;
 }
@@ -241,7 +241,7 @@ html {
     font-family: 'Nunito-Bold';
     padding: 40px 20px;
     background: var(--secondary-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid #226878;
     box-shadow: 0 0 30px 0 var(--box-shadow-80);
     color: var(--text-color-inverted);
     border-radius: 35px;
@@ -262,7 +262,8 @@ html {
 .container #volunteers {
     background: linear-gradient(#226878);
     color: var(--text-color);
-    border: 2px solid #278195;
+    border: 1px solid #278195;
+    box-shadow: 0 0 0 2px gray;
     padding: 10px 20px;
     border-radius: 35px;
     width: 150px;
@@ -271,9 +272,11 @@ html {
 .container #volunteers:hover {
     background: linear-gradient(135deg, #99ecff,#226878 35% 65%, #99ecff);
     color: var(--text-color-inverted);
+    box-shadow: 0 5px 15px 2px gray;
     transform: translateY(-3px);
 }
 .container #volunteers:active {
+    background: linear-gradient(135deg, #2c8ea4,#074e5f 35% 65%, #2c8ea4);
     scale: 0.75;
 }
 .pop-up {
@@ -394,7 +397,7 @@ html {
     padding: 40px 20px;
     background: var(--secondary-color);
     color: var(--text-color-inverted);
-    border: 1px solid var(--border-color);
+    border: 1px solid #226878;
     box-shadow: 0 0 30px 0 var(--box-shadow-80);
     border-radius: 35px;
     display: flex;
@@ -423,7 +426,7 @@ html {
     height: 250px;
     display: flex;
     background: var(--donations-div-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid #226878;
     border-radius: 30px;
     flex-direction: column;
     justify-content: space-around;
@@ -447,15 +450,19 @@ html {
     scroll-margin-top: 300px;
     background: linear-gradient(#226878);
     color: white;
-    box-shadow: 0 0 10px gray;
-    border: none;
+    box-shadow: 0 0 0 3px gray;
+    border: 1px solid #226878;
     border-radius: 30px;
     width: 100px;
-    transition: 200ms;
+    transition: 250ms;
 }
 .card-body a:hover {
     background: linear-gradient(135deg, #99ecff,#2c8ea4 35% 65%, #99ecff);
     color: #b4f1ff;
+}
+.card-body a:active {
+    background: linear-gradient(135deg, #2c8ea4,#074e5f 35% 65%, #2c8ea4);
+    scale: 0.85;
 }
 .card-body:nth-child(even) a:hover {
     box-shadow: 10px 10px 10px gray;
@@ -518,13 +525,13 @@ html {
     align-items: center;
 }
 .icon-div .circle:hover {
-    border: 2px solid cyan;
+    border: 2px solid #226878;
     background-color: var(--contact-hover-color);
     box-shadow: 0 0 0 15px var(--contact-color);
     .bi-geo-alt-fill,
     .bi-envelope-fill,
     .bi-telephone-fill {
-        color: cyan;
+        color: #226878;
     }
 }
 .icon-div p {
@@ -549,7 +556,7 @@ html {
     width: 100%;
 }
 .contact form div input {
-    outline: 1px solid var(--border-color);
+    outline: 2px solid #226878;
     background-color: var(--input-color);
 }
 .contact form div input::placeholder {
@@ -563,7 +570,7 @@ html {
     width: 100%;
     border-radius: 8px;
     background-color: var(--input-color);
-    outline: 2px solid var(--text-color-inverted);
+    outline: 2px solid #226878;
 }
 .contact form textarea::placeholder {
     color: #505050;
@@ -577,7 +584,7 @@ html {
     border: none;
     border-radius: 30px;
     background: linear-gradient(#226878);
-    box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 0 3px gray;
     width: 20%;
     height: 40px;
     transition: 200ms;
@@ -585,7 +592,7 @@ html {
 .contact form button:hover {
     background: linear-gradient(135deg, #99ecff,#226878 35% 65%, #99ecff);
     color: var(--text-color);
-    box-shadow: 0 10px 10px gray;
+    box-shadow: 0 10px 15px 0 gray;
 }
 
 /* ------------------------------------------------------------------------- footer */
