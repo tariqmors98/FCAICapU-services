@@ -1,3 +1,33 @@
+
+.arrow-return { /* smae as arrow-up's code in main.css */
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    line-height: 0;
+    vertical-align: 0;
+    background-color: #226878;
+    color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    animation: arrow-up 300ms forwards ease;
+    cursor: pointer;
+    z-index: 999;
+}
+.arrow-return:hover {
+    background-color: #3199b0;
+    box-shadow: 0 0 5px 5px var(--box-shadow-80);
+}
+.arrow-return:active {
+    background-color: #123e48;
+    transform: scale(0.85);
+}
+
 .navbar {
     position: sticky;
     background-color: black;
@@ -133,8 +163,8 @@
     width: 150px;
     height: 35px;
     background-color: #009E74;
-    color: var(--text-color);
-    border: 1px solid #226878;
+    color: white;
+    border: 2px solid #226878;
     border: none;
     border-radius: 30px;
     transition: 250ms;

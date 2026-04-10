@@ -52,6 +52,35 @@ html {
 .animated-body {
     animation: index-body 1s forwards ease;
 }
+.arrow-up,
+.arrow-return {
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    line-height: 0;
+    vertical-align: 0;
+    background-color: #226878;
+    color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    animation: arrow-up 300ms forwards ease;
+    cursor: pointer;
+    z-index: 999;
+}
+.arrow-up:hover {
+    background-color: #3199b0;
+    box-shadow: 0 0 5px 5px var(--box-shadow-80);
+}
+.arrow-up:active {
+    background-color: #123e48;
+    transform: scale(0.85);
+}
 
 /* ------------------------------------------------------------------------- navbar */
 
@@ -130,7 +159,7 @@ html {
 .navbar .loginBtn {
     margin-top: -15px;
     background: linear-gradient(135deg, #99ecff,#2c8ea4);
-    color: var(--text-color);
+    color: white;
     border: 1px solid #226878;
     box-shadow: 0 0 0 3px #00ffff52;
     padding: 10px 20px;
@@ -140,7 +169,6 @@ html {
 }
 .navbar .loginBtn:hover {
     background: linear-gradient(135deg,#2c8ea4, #99ecff);
-    color: var(--text-color-inverted);
     transform: translateY(-5px);
     box-shadow: 0 10px 15px 0 #00ffff52;
 }
@@ -261,7 +289,7 @@ html {
 }
 .container #volunteers {
     background: linear-gradient(#226878);
-    color: var(--text-color);
+    color: white;
     border: 1px solid #278195;
     box-shadow: 0 0 0 2px gray;
     padding: 10px 20px;
@@ -271,7 +299,7 @@ html {
 }
 .container #volunteers:hover {
     background: linear-gradient(135deg, #99ecff,#226878 35% 65%, #99ecff);
-    color: var(--text-color-inverted);
+    color: #b4f1ff;
     box-shadow: 0 5px 15px 2px gray;
     transform: translateY(-3px);
 }

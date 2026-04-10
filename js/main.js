@@ -1,13 +1,27 @@
 
-// scroll nav 200px
+// scroll nav 200px & arrow-up button
 
 let navScroll = document.getElementsByClassName("navbar")[0];
+let arrowUpBtn = document.getElementById("arrow-up");
+let arrowReturnBtn = document.getElementById("arrow-return");
 window.onscroll = function () {
-    if (document.documentElement.scrollTop > 135) {
+    if (document.documentElement.scrollTop >= 135) {
         navScroll.style.backgroundColor = "#226878";
+        arrowUpBtn.style.display = "flex";
+        arrowReturnBtn.style.bottom = "85px";
     } else {
         navScroll.style.backgroundColor = "transparent";
+        arrowUpBtn.style.display = "none";
+        arrowReturnBtn.style.bottom = "30px";
     }
+};
+if (arrowUpBtn) {
+    arrowUpBtn.addEventListener(
+        "click",
+        function () {
+            window.scrollTo({ top: 0 });
+        }
+    );
 };
 
 // button about volunteers & close Button animations
