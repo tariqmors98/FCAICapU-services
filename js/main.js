@@ -49,6 +49,28 @@ if (volunteerBtn) {
     });
 }
 
+// button for pay & close Button animations
+
+let payBtns = document.querySelectorAll(".backBtn");
+let closeBtns = document.querySelectorAll(".payCloseBtn");
+
+payBtns.forEach(
+    function (btn) {
+        btn.addEventListener("click", function () {
+            document.getElementById("payDiv").style.display = "flex";
+        }
+    );
+});
+
+closeBtns.forEach(
+    function (btn) {
+        btn.addEventListener("click", function () {
+            document.getElementById("payDiv").style.display = "none";
+        }
+    );
+});
+
+
 // change theme and save it with its colours
 
 let darkMode = document.querySelectorAll(".darkMode");
@@ -62,10 +84,10 @@ darkMode.forEach(
             darkMode.forEach(dark => dark.style.display = "none");
             lightMode.forEach(light => light.style.display = "block");
             
-            color.setProperty("--primary-color", "black");
-            localStorage.setItem("--primary-color", "black");
-            color.setProperty("--secondary-color", "#050505");
-            localStorage.setItem("--secondary-color", "#050505");
+            color.setProperty("--primary-color", "#000304");
+            localStorage.setItem("--primary-color", "#000304");
+            color.setProperty("--secondary-color", "#000507");
+            localStorage.setItem("--secondary-color", "#000507");
             color.setProperty("--border-color", "white");
             localStorage.setItem("--border-color", "white");
             color.setProperty("--text-color", "black");
@@ -95,10 +117,10 @@ lightMode.forEach(
             lightMode.forEach(light => light.style.display = "none");
             darkMode.forEach(dark => dark.style.display = "block");
 
-            color.setProperty("--primary-color", "white");
-            localStorage.setItem("--primary-color", "white");
-            color.setProperty("--secondary-color", "white");
-            localStorage.setItem("--secondary-color", "white");
+            color.setProperty("--primary-color", "#d3f7ff");
+            localStorage.setItem("--primary-color", "#d3f7ff");
+            color.setProperty("--secondary-color", "#cbf5ff");
+            localStorage.setItem("--secondary-color", "#cbf5ff");
             color.setProperty("--border-color", "black");
             localStorage.setItem("--border-color", "black");
             color.setProperty("--text-color", "white");
@@ -125,6 +147,7 @@ lightMode.forEach(
 
 if (darkMode && lightMode) {
     color.setProperty("--primary-color", localStorage.getItem("--primary-color"));
+    color.setProperty("--primary-color-support", localStorage.getItem("--primary-color-support"));
     color.setProperty("--secondary-color", localStorage.getItem("--secondary-color"));
     color.setProperty("--border-color", localStorage.getItem("--border-color"));
     color.setProperty("--text-color", localStorage.getItem("--text-color"));
@@ -148,21 +171,26 @@ if (darkMode && lightMode) {
 
 // ------------------------------------------------------------------------------------- for (html/filesname.html)
 
-let backBtn=document.getElementById("")
 
-// -----------------------------------------------------------------------------------------------
 
-document
-.getElementById("donationForm")
-    .addEventListener("submit", function (e) {
-        e.preventDefault();
+// reveal code for all project
 
-        let name = document.getElementById("name").value;
-        let amount = document.getElementById("amount").value;
-        
-        document.getElementById("msg").innerHTML =
-        "شكراً يا " + name + " ❤️ تم تسجيل تبرعك بقيمة " + amount + " جنيه";
-        
-        this.reset();
-    });    
-    
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("active");
+                }, 150);
+            } // else {
+            //     entry.target.classList.remove("active");
+            // }
+        });
+    });
+
+    elements.forEach(function (el) {
+        observer.observe(el);
+    });
+});

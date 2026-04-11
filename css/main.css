@@ -26,8 +26,8 @@
 /* ------------------------------------------------------------------------- Basics */
 
 :root {
-    --primary-color: white;
-    --secondary-color: white;
+    --primary-color: #d3f7ff;
+    --secondary-color: #cbf5ff;
     --border-color: black;
     --text-color: white;
     --text-color-inverted: black;
@@ -43,11 +43,14 @@
 }
 * {
     font-family: 'Nunito-Bold';
-    transition: 500ms;
+    transition: 1s;
 }
 html {
     scroll-behavior: smooth;
     font-family: 'Nunito-Bold';
+}
+body {
+    background: var(--primary-color);
 }
 .animated-body {
     animation: index-body 1s forwards ease;
@@ -271,10 +274,10 @@ html {
     font-family: 'Nunito-Bold';
     padding: 40px 20px;
     background: var(--secondary-color);
-    border: 1px solid #226878;
-    box-shadow: 0 0 30px 0 var(--box-shadow-80);
     color: var(--text-color-inverted);
+    border: 1px solid #226878;
     border-radius: 35px;
+    box-shadow: 0 0 15px 0 var(--box-shadow-80);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -315,7 +318,7 @@ html {
     right: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: #00000080;
     display: none;
     backdrop-filter: blur(20px);
     z-index: 1000;
@@ -324,7 +327,7 @@ html {
 .popup-hide {
     animation: pop-up2 750ms forwards ease;
 }
-.pop-up #closeBtn {
+.pop-up .closeBtn {
     position: absolute;
     top: 0;
     right: 0;
@@ -337,9 +340,12 @@ html {
     cursor: pointer;
     transition: 200ms;
 }
-.pop-up #closeBtn:hover {
+.pop-up .closeBtn:hover {
     background-color: red;
     color: white;
+}
+.pop-up .closeBtn:active {
+    background-color: #b40000;
 }
 .mini-pop-up {
     position: absolute;
@@ -391,12 +397,7 @@ html {
     align-items: center;
     border-radius: 25px;
     overflow: hidden;
-}
-.mini-pop-up .container2 .div1 div:hover,
-.mini-pop-up .container2 .div2 div:hover,
-.mini-pop-up .container2 .div3 div:hover {
-    width: 90%;
-    height: 55%;
+    transition: all 350ms 0s linear;
 }
 .mini-pop-up .container2 img {
     margin: 15px 0;
@@ -404,6 +405,17 @@ html {
     height: 100px;
     border: 2px solid gray;
     border-radius: 50%;
+}
+.mini-pop-up .container2 .div1 div:hover,
+.mini-pop-up .container2 .div2 div:hover,
+.mini-pop-up .container2 .div3 div:hover {
+    width: 95%;
+    height: 55%;
+    img {
+        scale: 1.25;
+        transition: all 100ms 0 linear;
+    }
+    transition: all 150ms 0s linear;
 }
 .mini-pop-up .container2 p {
     font-size: 18px;
@@ -428,8 +440,8 @@ html {
     background: var(--secondary-color);
     color: var(--text-color-inverted);
     border: 1px solid #226878;
-    box-shadow: 0 0 30px 0 var(--box-shadow-80);
     border-radius: 35px;
+    box-shadow: 0 0 15px 0 var(--box-shadow-80);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -517,7 +529,7 @@ html {
     height: 30px;
 }
 .card-body a {
-    scroll-margin-top: 300px;
+    scroll-margin-top: 550px;
     background: linear-gradient(#226878);
     color: white;
     box-shadow: 0 0 0 3px gray;
@@ -544,11 +556,11 @@ html {
 /* ------------------------------------------------------------------------- contact */
 .contact {
     padding: 25px;
-    scroll-margin-top: 60px;
+    scroll-margin-top: 50px;
     display: block;
     width: 100%;
     height: 100%;
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     gap: 20px;
 }
 .contact .container {
@@ -556,7 +568,6 @@ html {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: var(--text-color);
 }
 .contact h2 {
     text-align: center;
@@ -564,8 +575,8 @@ html {
     margin: auto;
     margin-bottom: 26px;
     padding: 15px;
-    background: linear-gradient(135deg, var(--text-color), var(--box-shadow-80), var(--text-color), var(--box-shadow-80), var(--text-color));
-    color: #339cb3;
+    background: linear-gradient(135deg, var(--primary-color) 15%, var(--box-shadow-80) 15%, var(--primary-color) 45% 55%, var(--box-shadow-80) 85%,var(--primary-color) 85%);
+    color: #176779;
 }
 .contact .bootstrap-icons {
     display: flex;
@@ -593,6 +604,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 200ms;
 }
 .icon-div .circle:hover {
     border: 2px solid #226878;
@@ -628,6 +640,7 @@ html {
 .contact form div input {
     outline: 2px solid #226878;
     background-color: var(--input-color);
+    transition: 250ms;
 }
 .contact form div input::placeholder {
     color: #505050;
@@ -641,6 +654,7 @@ html {
     border-radius: 8px;
     background-color: var(--input-color);
     outline: 2px solid #226878;
+    transition: 250ms;
 }
 .contact form textarea::placeholder {
     color: #505050;
@@ -684,9 +698,7 @@ footer::before {
     width: 100%;
     height: 100%;
     background:
-        linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0,0,0,1) 100%),
-        url('../attachments/wallpapers/CapUniversity.jpg'),
-        fixed;
+        linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0,0,0,1) 100%), fixed;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;

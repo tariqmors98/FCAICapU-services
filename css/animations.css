@@ -92,3 +92,27 @@
     }
 }
 
+/* reveal code for all project */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s 0s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* CSS for html/filenames.html */
+
+@keyframes animated-body-support {
+    from {
+        opacity: 0;
+        background: black;
+        visibility: hidden;
+    } to {
+        opacity: 1;
+        background-color: transparent;
+    }
+}

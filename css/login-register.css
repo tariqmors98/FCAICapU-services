@@ -74,3 +74,17 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Code for forgot-password.html */
+
+.change-password {
+    padding: 30px 0;
+    height: 100%;
+}
+.change-password .form-box {
+    height: 100%;
+}
+.change-password button {
+    width: auto;
+    margin-bottom: 20px;
+}
