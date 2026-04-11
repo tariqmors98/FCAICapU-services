@@ -451,17 +451,57 @@ html {
     border: none;
 }
 .project-card .card-body {
-    justify-content: center;
+    position: relative;
     width: calc((100% - 50px) / 2);
     height: 250px;
-    display: flex;
     background: var(--donations-div-color);
     border: 1px solid #226878;
     border-radius: 30px;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    align-items: center;
+    opacity: 0.9;
+    overflow: hidden;
+    transition: 200ms;
+}
+.card-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--box-shadow-80);
+    z-index: -1;
+}
+.card-body:nth-child(1):before {
+    background: url('../attachments/college.jpg');
+    background-size: cover;
+    opacity: 0.5;
+}
+.card-body:nth-child(2):before {
+    background: url('../attachments/students.jpg');
+    background-size: cover;
+    opacity: 0.5;
+}
+.card-body:nth-child(3):before {
+    background: url('../attachments/graduation-projects.jpg');
+    background-size: cover;
+    opacity: 0.5;
+}
+.card-body:nth-child(4):before {
+    background: url('../attachments/uni-events.jpg');
+    background-size: cover;
+    opacity: 0.5;
+}
+.card-body:hover {
+    .card-body:nth-child(1):before,
+    .card-body:nth-child(2):before,
+    .card-body:nth-child(3):before,
+    .card-body:nth-child(4):before {
+        scale: 1.1;
+    }
 }
 .card-body h5,
 .card-body p {
