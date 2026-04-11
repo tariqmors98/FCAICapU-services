@@ -94,6 +94,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(25px);
     transition: 300ms;
     z-index: 1000;
 }
@@ -242,6 +243,7 @@ html {
     animation: width-hero-h1 3s steps(2500), blink 350ms infinite;
 }
 .hero p {
+    margin: auto;
     padding: 10px;
     font-family: 'Patrick_Hand';
     letter-spacing: 1px;
