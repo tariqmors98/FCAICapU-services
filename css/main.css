@@ -279,7 +279,6 @@ html {
     align-items: center;
     text-align: center;
     height: 400px;
-    backdrop-filter: blur(15px);
 }
 .about .container h1 {
     color: #339cb3;
