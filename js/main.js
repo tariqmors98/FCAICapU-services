@@ -146,6 +146,10 @@ if (darkMode && lightMode) {
     }
 }
 
+// ------------------------------------------------------------------------------------- for (html/filesname.html)
+
+let backBtn=document.getElementById("")
+
 // -----------------------------------------------------------------------------------------------
 
 document
@@ -160,18 +164,5 @@ document
         "شكراً يا " + name + " ❤️ تم تسجيل تبرعك بقيمة " + amount + " جنيه";
         
         this.reset();
-    });
-
-// ------------------------------------------------------------------------------------- for (html/filename.html)
-
-let back = document.querySelectorAll(".back");
-
-back.forEach(
-    btn => {
-        btn.addEventListener("click",
-            function () {
-                alert("ssss");
-            }
-        )
-    }
-);
+    });    
+    
